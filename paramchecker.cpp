@@ -1,11 +1,15 @@
 
+
+
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  if(bpm < 70 || bpm > 150) {
-    return false;
-  } else if(spo2 < 80) {
-    return false;
-  } else if(respRate < 30 || respRate > 60) {
+  
+  bool badBpm = bpm < 70 || bpm > 150;
+  bool badspo2 = spo2 < 80;
+  bool badRespRate = respRate < 30 || respRate > 60;
+  
+  if( badBpm || badspo2 || badRespRate) {
     return false;
   }
   return true;
 }
+
