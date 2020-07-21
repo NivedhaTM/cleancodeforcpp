@@ -1,5 +1,4 @@
 #include "paramchecker.h"
-#include "paramchecker.cpp"
 #include <gtest/gtest.h>
  
 TEST(VitalsTest, BPM) { 
