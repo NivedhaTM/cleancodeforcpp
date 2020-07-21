@@ -11,6 +11,10 @@
 //   return true;
 // }
 
+bool isBpmOk(float bpm);
+bool isSpo2Ok(float spo2);
+bool isRespRateOk(float respRate);
+
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
 
   if( !isBpmOk(bpm) || !isSpo2Ok(spo2) || !isRespRateOk(respRate)) {
