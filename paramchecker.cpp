@@ -1,20 +1,45 @@
+class VitalData{
+  private:
+    float bpm, spo2, respRate ;
 
-bool isBpmOk(float bpm);
-bool isSpo2Ok(float spo2);
-bool isRespRateOk(float respRate);
+  public:
+    void setBpm(float bpmValue) {
+      bpm= bpmValue;
+    }
+    float getBpm() {
+      return bpm;
+    }
+    void setSpo2(float spo2Value) {
+      spo2= spo2Value;
+    }
+    float getSpo2() {
+      return spo2;
+    }
+    void setRespRate(float respRateValue) {
+      respRate = respRateValue;
+    }
+    float getRespRate() {
+      return respRate;
+    }
 
-bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  return !( isBpmOk(bpm) || isSpo2Ok(spo2) || isRespRateOk(respRate));
-}
+  bool isBpmOk() {
+    return ( bpm < 70 || bpm > 150);
+  }
 
-bool isBpmOk(float bpm) {
- return ( bpm < 70 || bpm > 150);
-}
-
-bool isSpo2Ok(float spo2) {
+  bool isSpo2Ok() {
   return  spo2 < 80;
-}
+  }
 
-bool isRespRateOk(float respRate) {
+  bool isRespRateOk() {
   return (respRate < 30 || respRate > 60);
-}
+  }
+  
+  bool isVitalsOk() {
+        return !( isBpmOk(bpm) || isSpo2Ok(spo2) || isRespRateOk(respRate));
+  }
+
+};
+
+
+
+
