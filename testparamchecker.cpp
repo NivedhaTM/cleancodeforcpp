@@ -2,10 +2,7 @@
 #include <gtest/gtest.h>
  
 TEST(VitalsTest, BPM) { 
-  VitalData data;
-  data.setBpm(80);
-  data.setSpo2(70);
-  data.setRespRate(35);
+  VitalData data = VitalData(80, 70, 35);
   bool result = data.isVitalsOk();
   ASSERT_EQ(false, result);
 }
