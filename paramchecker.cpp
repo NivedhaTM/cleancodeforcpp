@@ -5,15 +5,7 @@
        spo2 = spo2Value;
        respRate = respRateValue; 
     }
-//     void setBpm(float bpmValue) {
-//       bpm = bpmValue;
-//     }
-//     void setSpo2(float spo2Value) {
-//       spo2 = spo2Value;
-//     }
-//     void setRespRate(float respRateValue) {
-//       respRate = respRateValue;
-//     }
+
     bool VitalData::isBpmOk() {
       return !( bpm < 70 || bpm > 150);
     }
