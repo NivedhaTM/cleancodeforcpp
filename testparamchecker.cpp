@@ -1,4 +1,5 @@
 #include "paramchecker.h"
+#include "paramchecker.cpp"
 #include <gtest/gtest.h>
  
 TEST(VitalsTest, BPM) { 
@@ -6,10 +7,9 @@ TEST(VitalsTest, BPM) {
   data.setBpm(80);
   data.setSpo2(70);
   data.setRespRate(35);
-  
-  ASSERT_EQ(false, data.isVitalsOk());
+  bool result = data.isVitalsOk();
+  ASSERT_EQ(false, result);
 }
- 
  
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
