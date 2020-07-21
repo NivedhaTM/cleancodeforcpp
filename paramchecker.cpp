@@ -1,3 +1,4 @@
+#include "paramchecker.h"
 
     void setBpm(float bpmValue) {
       bpm= bpmValue;
