@@ -1,34 +1,30 @@
 #include "paramchecker.h"
 
-    void setBpm(float bpmValue) {
-      bpm= bpmValue;
+    VitalData::VitalData(float bpmValue, float spo2Value, float respRateValue){
+       bpm = bpmValue;
+       spo2 = spo2Value;
+       respRate = respRateValue; 
     }
-    float getBpm() {
-      return bpm;
-    }
-    void setSpo2(float spo2Value) {
-      spo2= spo2Value;
-    }
-    float getSpo2() {
-      return spo2;
-    }
-    void setRespRate(float respRateValue) {
-      respRate = respRateValue;
-    }
-    float getRespRate() {
-      return respRate;
-    }
-    bool isBpmOk() {
+//     void setBpm(float bpmValue) {
+//       bpm = bpmValue;
+//     }
+//     void setSpo2(float spo2Value) {
+//       spo2 = spo2Value;
+//     }
+//     void setRespRate(float respRateValue) {
+//       respRate = respRateValue;
+//     }
+    bool VitalData::isBpmOk() {
       return !( bpm < 70 || bpm > 150);
     }
-    bool isSpo2Ok() {
+    bool VitalData::isSpo2Ok() {
       return  !(spo2 < 80);
     }
-    bool isRespRateOk() {
+    bool VitalData::isRespRateOk() {
       return !(respRate < 30 || respRate > 60);
     }
   
-    bool isVitalsOk() {
+    bool VitalData::isVitalsOk() {
         return (isBpmOk() && isSpo2Ok() && isRespRateOk());
     }
 
