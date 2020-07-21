@@ -4,15 +4,12 @@
 TEST(VitalsTest, BPM) { 
   VitalData data;
   data.setBpm(80);
-  data.setSpo2(80);
-  data.setRespRate(80);
+  data.setSpo2(70);
+  data.setRespRate(35);
   
-  ASSERT_EQ(true, data.isVitalsOk());
+  ASSERT_EQ(false, data.isVitalsOk());
 }
  
-TEST(VitalsTest, SPO2) {
-    ASSERT_EQ(false, vitalsAreOk(100, 40, 50));
-}
  
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
