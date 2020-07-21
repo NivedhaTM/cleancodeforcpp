@@ -1,8 +1,4 @@
-class VitalData{
-  private:
-    float bpm, spo2, respRate ;
 
-  public:
     void setBpm(float bpmValue) {
       bpm= bpmValue;
     }
@@ -34,7 +30,7 @@ class VitalData{
     bool isVitalsOk() {
         return (isBpmOk() && isSpo2Ok() && isRespRateOk());
     }
-};
+
 
 
 
