@@ -35,7 +35,7 @@ class VitalData{
   }
   
   bool isVitalsOk() {
-        return !( isBpmOk(bpm) || isSpo2Ok(spo2) || isRespRateOk(respRate));
+        return !( isBpmOk() || isSpo2Ok() || isRespRateOk());
   }
 
 };
