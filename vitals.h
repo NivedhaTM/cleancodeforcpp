@@ -3,6 +3,7 @@ class Vitals{
     float vitalValue ;
 
   public:
+    bool setValue(float vitalValue);
     bool isVitalOk() ;
 };
 
@@ -11,6 +12,7 @@ class BPM{
     float vitalValue ;
 
   public:
+    bool setValue(float vitalValue);
     bool isVitalOk() ;
 };
 
@@ -19,6 +21,7 @@ class SPO2{
     float vitalValue ;
 
   public:
+    bool setValue(float vitalValue);
     bool isVitalOk() ;
 };
 
@@ -27,5 +30,6 @@ class RespRate{
     float vitalValue ;
 
   public:
+    bool setValue(float vitalValue);
     bool isVitalOk() ;
 };
