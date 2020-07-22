@@ -47,7 +47,7 @@ int main(void) {
    spo2.setValue(80);
    respRate.setValue(80);
 
-   bool  isVitalsOK =  bpm.isVitalsOk() && spo2.isVitalsOk() && respRate.isVitalsOk() ;
+   bool  isVitalsOK =  bpm.isVitalOk() && spo2.isVitalOk() && respRate.isVitalOk() ;
    cout << "Is Vitals OK: " << isVitalsOK  << endl; 
 
    return 0;
