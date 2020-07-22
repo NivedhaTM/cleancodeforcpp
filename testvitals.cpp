@@ -56,7 +56,7 @@ TEST(VitalTest, BAD_RESPRATE) {
 }
 
 TEST(VitalTest, BAD_VITALS) { 
-  VitalData data = VitalData(60, 70, 20);
+
    BPM bpm;
    SPO2 spo2;
    RespRate respRate;
